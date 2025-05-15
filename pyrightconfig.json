@@ -1,0 +1,19 @@
+{
+    "exclude": [
+        "ui/forms",
+        "dist",
+        "build",
+        ".venv",
+        ".env",
+        "__pycache__",
+        "**/__pycache__",
+        ".mypy_cache",
+        ".pytest_cache",
+        ".vscode",
+        ".idea",
+        "node_modules",
+        ".cache"
+    ],
+    "typeCheckingMode": "standard",
+    "reportIncompatibleMethodOverride": "none"
+}
