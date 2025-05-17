@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "auto-py-to-exe>=2.46.0",
     "ghostscript>=0.7",
     "pyside6>=6.9.0",
 ]

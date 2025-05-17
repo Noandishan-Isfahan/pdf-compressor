@@ -20,6 +20,7 @@ clean:
 	rm -rf ./.ruff_cache
 	rm -rf ./output
 	rm -rf ./build
+	rm -rf ./dist
 	find . -maxdepth 2 -name "*.so" -delete
 	find . -maxdepth 2 -name "*.c" -delete
 	find . -maxdepth 2 -name "*.spec" -delete
