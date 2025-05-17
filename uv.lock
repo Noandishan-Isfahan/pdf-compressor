@@ -31,6 +31,18 @@ wheels = [
 ]
 
 [[package]]
+name = "ghostscript"
+version = "0.7"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "setuptools" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/84/73/08197d85f73b09843105c64231b0284965e7fae8ca7ce05c8c2674bbd583/ghostscript-0.7.tar.gz", hash = "sha256:b7875a87098740eb0be3de2d9662d15db727305ca9a6d4b7534a3cc33a4b965a", size = 46557, upload-time = "2021-03-06T15:56:03.115Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/89/5b/fa8ac3997ae33d631179ea2e972a5db358d5418b8cccbecfa4dc4c1f3b77/ghostscript-0.7-py2.py3-none-any.whl", hash = "sha256:97c70e27ba6b1cab4ab1d9b4cc82d89b8b53e57971f608ded4950b8aa20c78a7", size = 25327, upload-time = "2021-03-06T15:56:01.093Z" },
+]
+
+[[package]]
 name = "macholib"
 version = "1.16.3"
 source = { registry = "https://pypi.org/simple" }
@@ -56,6 +68,7 @@ name = "pdf-compressor"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "ghostscript" },
     { name = "pyside6" },
 ]
 
@@ -68,7 +81,10 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "pyside6", specifier = ">=6.9.0" }]
+requires-dist = [
+    { name = "ghostscript", specifier = ">=0.7" },
+    { name = "pyside6", specifier = ">=6.9.0" },
+]
 
 [package.metadata.requires-dev]
 dev = [

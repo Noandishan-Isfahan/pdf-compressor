@@ -9,5 +9,12 @@ FONT_DIR = ROOT_DIR / "img" / "fonts"
 FONT_NAMES = ["Vazirmatn-Regular.ttf"]
 FONTS = [str(FONT_DIR / font) for font in FONT_NAMES]
 
+TEMP_FOLDER = ROOT_DIR / "temp"
 
 MAIN_ICON = ROOT_DIR / "img" / "default_images" / "nhs-logo.ico"
+MAIN_LOGO = ROOT_DIR / "img" / "default_images" / "nhs-logo.png"
+
+
+DEFUALT_COLOR_IMAGE_RES = 125
+DEFUALT_GRAY_IMAGE_RES = 115
+DEFUALT_MONO_IMAGE_RES = 150

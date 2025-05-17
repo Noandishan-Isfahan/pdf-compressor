@@ -72,7 +72,7 @@
       <property name="maximumSize">
        <size>
         <width>16777215</width>
-        <height>50</height>
+        <height>80</height>
        </size>
       </property>
       <property name="font">
@@ -86,8 +86,8 @@
       <property name="alignment">
        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
       </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
         <widget class="QLabel" name="label">
          <property name="font">
           <font>
@@ -96,10 +96,32 @@
           </font>
          </property>
          <property name="text">
-          <string>نرم‌افزار فشرده سازی pdf</string>
+          <string>نرم‌افزار فشرده سازی pdf نواندیشان</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lbl_logo">
+         <property name="minimumSize">
+          <size>
+           <width>60</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>60</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -210,17 +232,18 @@
               </widget>
              </item>
              <item>
-              <widget class="QTextEdit" name="txt_color_image_res">
+              <widget class="QLineEdit" name="txt_color_image_res">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="maximumSize">
                 <size>
                  <width>80</width>
                  <height>16777215</height>
                 </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Vazirmatn</family>
-                </font>
                </property>
               </widget>
              </item>
@@ -285,17 +308,18 @@
               </widget>
              </item>
              <item>
-              <widget class="QTextEdit" name="txt_grat_image_res">
+              <widget class="QLineEdit" name="txt_gray_image_res">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="maximumSize">
                 <size>
                  <width>80</width>
                  <height>16777215</height>
                 </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Vazirmatn</family>
-                </font>
                </property>
               </widget>
              </item>
@@ -360,17 +384,18 @@
               </widget>
              </item>
              <item>
-              <widget class="QTextEdit" name="txt_mono_image_res">
+              <widget class="QLineEdit" name="txt_mono_image_res">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="maximumSize">
                 <size>
                  <width>80</width>
                  <height>16777215</height>
                 </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Vazirmatn</family>
-                </font>
                </property>
               </widget>
              </item>

@@ -1,6 +1,6 @@
 {
     "exclude": [
-        "ui/forms",
+        "**/ui/forms",
         "dist",
         "build",
         ".venv",

@@ -1,12 +1,12 @@
 from setting import ROOT_DIR
 from pathlib import Path
-from ui.custom.Widget import CustomLabel,CustomPushButton
+from src.ui.custom.Widget import CustomLabel,CustomPushButton
 # -*- coding: utf-8 -*-
 
 ################################################################################
 ## Form generated from reading UI file 'main.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.7.1
+## Created by: Qt User Interface Compiler version 6.9.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -20,9 +20,9 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QGroupBox,
-    QHBoxLayout, QLabel, QLayout, QMainWindow,
-    QMenu, QMenuBar, QPushButton, QSizePolicy,
-    QSpacerItem, QTextEdit, QVBoxLayout, QWidget)
+    QHBoxLayout, QLabel, QLayout, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QSpacerItem, QVBoxLayout, QWidget)
 
 class Ui_mainWindow(object):
     def setupUi(self, mainWindow):
@@ -58,11 +58,11 @@ class Ui_mainWindow(object):
         self.gridLayout_2.setVerticalSpacing(0)
         self.groupBox = QGroupBox(self.centralwidget)
         self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setMaximumSize(QSize(16777215, 50))
+        self.groupBox.setMaximumSize(QSize(16777215, 80))
         self.groupBox.setFont(font)
         self.groupBox.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-        self.gridLayout = QGridLayout(self.groupBox)
-        self.gridLayout.setObjectName(u"gridLayout")
+        self.horizontalLayout_9 = QHBoxLayout(self.groupBox)
+        self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
         self.label = CustomLabel(self.groupBox)
         self.label.setObjectName(u"label")
         font1 = QFont()
@@ -71,7 +71,15 @@ class Ui_mainWindow(object):
         self.label.setFont(font1)
         self.label.setAlignment(Qt.AlignCenter)
 
-        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
+        self.horizontalLayout_9.addWidget(self.label)
+
+        self.lbl_logo = CustomLabel(self.groupBox)
+        self.lbl_logo.setObjectName(u"lbl_logo")
+        self.lbl_logo.setMinimumSize(QSize(60, 60))
+        self.lbl_logo.setMaximumSize(QSize(60, 60))
+        self.lbl_logo.setScaledContents(True)
+
+        self.horizontalLayout_9.addWidget(self.lbl_logo)
 
 
         self.gridLayout_2.addWidget(self.groupBox, 0, 0, 1, 1)
@@ -114,10 +122,14 @@ class Ui_mainWindow(object):
 
         self.horizontalLayout.addWidget(self.label_2)
 
-        self.txt_color_image_res = QTextEdit(self.groupBox_5)
+        self.txt_color_image_res = QLineEdit(self.groupBox_5)
         self.txt_color_image_res.setObjectName(u"txt_color_image_res")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.txt_color_image_res.sizePolicy().hasHeightForWidth())
+        self.txt_color_image_res.setSizePolicy(sizePolicy1)
         self.txt_color_image_res.setMaximumSize(QSize(80, 16777215))
-        self.txt_color_image_res.setFont(font)
 
         self.horizontalLayout.addWidget(self.txt_color_image_res)
 
@@ -143,12 +155,13 @@ class Ui_mainWindow(object):
 
         self.horizontalLayout_3.addWidget(self.label_3)
 
-        self.txt_grat_image_res = QTextEdit(self.groupBox_6)
-        self.txt_grat_image_res.setObjectName(u"txt_grat_image_res")
-        self.txt_grat_image_res.setMaximumSize(QSize(80, 16777215))
-        self.txt_grat_image_res.setFont(font)
+        self.txt_gray_image_res = QLineEdit(self.groupBox_6)
+        self.txt_gray_image_res.setObjectName(u"txt_gray_image_res")
+        sizePolicy1.setHeightForWidth(self.txt_gray_image_res.sizePolicy().hasHeightForWidth())
+        self.txt_gray_image_res.setSizePolicy(sizePolicy1)
+        self.txt_gray_image_res.setMaximumSize(QSize(80, 16777215))
 
-        self.horizontalLayout_3.addWidget(self.txt_grat_image_res)
+        self.horizontalLayout_3.addWidget(self.txt_gray_image_res)
 
 
         self.verticalLayout_2.addWidget(self.groupBox_6)
@@ -172,10 +185,11 @@ class Ui_mainWindow(object):
 
         self.horizontalLayout_4.addWidget(self.label_4)
 
-        self.txt_mono_image_res = QTextEdit(self.groupBox_7)
+        self.txt_mono_image_res = QLineEdit(self.groupBox_7)
         self.txt_mono_image_res.setObjectName(u"txt_mono_image_res")
+        sizePolicy1.setHeightForWidth(self.txt_mono_image_res.sizePolicy().hasHeightForWidth())
+        self.txt_mono_image_res.setSizePolicy(sizePolicy1)
         self.txt_mono_image_res.setMaximumSize(QSize(80, 16777215))
-        self.txt_mono_image_res.setFont(font)
 
         self.horizontalLayout_4.addWidget(self.txt_mono_image_res)
 
@@ -331,7 +345,8 @@ class Ui_mainWindow(object):
         self.menu_openfile.setText(QCoreApplication.translate("mainWindow", u"\u0628\u0627\u0632\u06a9\u0631\u062f\u0646 \u0641\u0627\u06cc\u0644", None))
         self.menu_savefile.setText(QCoreApplication.translate("mainWindow", u"\u0630\u062e\u06cc\u0631\u0647", None))
         self.groupBox.setTitle("")
-        self.label.setText(QCoreApplication.translate("mainWindow", u"\u0646\u0631\u0645\u200c\u0627\u0641\u0632\u0627\u0631 \u0641\u0634\u0631\u062f\u0647 \u0633\u0627\u0632\u06cc pdf", None))
+        self.label.setText(QCoreApplication.translate("mainWindow", u"\u0646\u0631\u0645\u200c\u0627\u0641\u0632\u0627\u0631 \u0641\u0634\u0631\u062f\u0647 \u0633\u0627\u0632\u06cc pdf \u0646\u0648\u0627\u0646\u062f\u06cc\u0634\u0627\u0646", None))
+        self.lbl_logo.setText("")
         self.groupBox_2.setTitle("")
         self.groupBox_3.setTitle(QCoreApplication.translate("mainWindow", u"\u062a\u0646\u0638\u06cc\u0645\u0627\u062a", None))
         self.groupBox_5.setTitle("")

@@ -68,38 +68,3 @@ class CustomLabel(QLabel):
         else:
             self.clicked_with_button.emit("middle")
         super(CustomLabel, self).mousePressEvent(event)
-
-    def set_image_or_gif(self, image_path: str, scaled=False):
-        # Stop any active movie (if it's a GIF)
-        if self.gif and self.gif.state() == QMovie.MovieState.Running:
-            self.gif.stop()
-
-        # Determine if the file is a GIF or a static image
-        if image_path.lower().endswith(".gif"):
-            self.set_gif(image_path)
-        else:
-            self.set_static_image(image_path, scaled)
-
-    def set_gif(self, gif_path):
-        self.gif = QMovie(gif_path)
-        self.gif.setScaledSize(self.size())
-        self.gif.frameChanged.connect(self.check_if_finished)
-        self.setMovie(self.gif)
-        self.gif.start()
-
-    def check_if_finished(self, frame_number):
-        if frame_number == self.gif.frameCount() - 1:  # type: ignore
-            # Emit signal when the last frame is reached
-            self.gif_finished.emit()
-
-    def set_static_image(self, image_path, sclaed=False):
-        pixmap = QPixmap(image_path)
-        self.setPixmap(
-            pixmap
-            if not sclaed
-            else pixmap.scaled(
-                self.size(),
-                Qt.AspectRatioMode.KeepAspectRatio,
-                Qt.TransformationMode.SmoothTransformation,
-            )
-        )
