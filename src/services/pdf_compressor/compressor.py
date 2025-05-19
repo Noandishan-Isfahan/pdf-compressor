@@ -40,9 +40,6 @@ def compress(color_res: int, mono_res: int, gray_res: int, input_file: Path) -> 
         f"-sOutputFile={temp_file}",
         str(input_file),
     ]
-    # arguments have to be bytes, encode them
-    encoding = locale.getpreferredencoding()
-    args = [a.encode(encoding) for a in gs_cmd]
 
-    ghostscript.Ghostscript(*args)
+    ghostscript.Ghostscript(*gs_cmd)
     return temp_file

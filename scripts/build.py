@@ -35,7 +35,7 @@ def convert_to_executable():
         name = input("Enter full app name (e.g PDF Compressor v1.6):")
     else:
         name = BASE_NAME + input("Enter Version (e.g V1.6):")
-    command = "pyinstaller --noconfirm --onedir --windowed "
+    command = "pyinstaller --noconfirm --onefile --windowed "
     command += f'--icon "{str(icon.absolute())}" '
     command += f'--name "{name.strip()}" '
     for d in EXECUTABLE_DATA_PATHS:
