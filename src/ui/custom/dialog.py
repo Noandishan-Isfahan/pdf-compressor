@@ -9,7 +9,7 @@ class MessageBoxButtons(Enum):
         QMessageBox.StandardButton.Yes: "باشه",
         QMessageBox.StandardButton.Cancel: "لغو",
     }
-    DEFUALT = {}
+    DEFAULT = {}
     OK = {
         QMessageBox.StandardButton.Ok: "باشه",
     }
@@ -20,7 +20,7 @@ def create_message_box(
     title: str,
     text: str,
     icon: QMessageBox.Icon = QMessageBox.Icon.Information,
-    button_texts: MessageBoxButtons = MessageBoxButtons.DEFUALT,
+    button_texts: MessageBoxButtons = MessageBoxButtons.DEFAULT,
 ) -> QMessageBox:
     # Create the QMessageBox instance
     message_box = QMessageBox(parent)

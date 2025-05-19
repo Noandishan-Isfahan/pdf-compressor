@@ -12,3 +12,4 @@ wheels/
 .vscode
 temp
 *.spec
+logs

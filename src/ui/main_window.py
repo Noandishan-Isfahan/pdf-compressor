@@ -5,7 +5,13 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QIcon, QPixmap
 from PySide6.QtWidgets import QMainWindow
 
-from setting import DEFUALT_COLOR_IMAGE_RES, MAIN_ICON, MAIN_LOGO
+from setting import (
+    DEFAULT_COLOR_IMAGE_RES,
+    DEFAULT_GRAY_IMAGE_RES,
+    DEFAULT_MONO_IMAGE_RES,
+    MAIN_ICON,
+    MAIN_LOGO,
+)
 from src.services.pdf_compressor.compressor import compress
 from src.ui.custom.dialog import (
     create_message_box,
@@ -31,9 +37,9 @@ class MainWindow(QMainWindow):
         self.ui.lbl_file_name.setText("فایلی انتخاب نشده است")
         self.ui.lbl_file_size.setText("0 بایت")
 
-        self.ui.txt_color_image_res.setText(str(DEFUALT_COLOR_IMAGE_RES))
-        self.ui.txt_mono_image_res.setText(str(DEFUALT_COLOR_IMAGE_RES))
-        self.ui.txt_gray_image_res.setText(str(DEFUALT_COLOR_IMAGE_RES))
+        self.ui.txt_color_image_res.setText(str(DEFAULT_COLOR_IMAGE_RES))
+        self.ui.txt_mono_image_res.setText(str(DEFAULT_MONO_IMAGE_RES))
+        self.ui.txt_gray_image_res.setText(str(DEFAULT_GRAY_IMAGE_RES))
 
         self.ui.lbl_logo.setPixmap(QPixmap(str(MAIN_LOGO)))
 
